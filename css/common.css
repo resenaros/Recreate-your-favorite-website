@@ -1,0 +1,98 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 16px;
+}
+
+.sidebar {
+  transition: width ease 200ms;
+  z-index: 2;
+}
+
+.nav-item {
+  width: 100%;
+}
+
+.nav-link,
+.brand {
+  display: flex;
+  align-items: center;
+  height: 5rem;
+  text-decoration: none;
+}
+
+.brand-text,
+.link-text {
+  display: none;
+  margin-left: 1rem;
+}
+
+.nav-link p,
+.brand p {
+  width: 2rem;
+  min-width: 2rem;
+  margin: 0 1.5rem;
+}
+
+.nav-link:hover {
+  background-color: #495057; /* dark gray hover background */
+  color: #ffc107 !important; /* yellowish text/icon */
+}
+
+.brand p {
+  transform: rotate(0deg);
+  transition: ease 1s;
+}
+
+.sidebar:hover .brand p {
+  transform: rotate(-45deg);
+}
+
+/* === MOBILE STYLES === */
+@media (max-width: 768px) {
+  .sidebar {
+    bottom: 0;
+    height: 5rem;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .brand {
+    display: none;
+  }
+
+  .navbar-nav {
+    flex-direction: row !important;
+  }
+
+  .nav-link {
+    justify-content: center;
+  }
+
+  main {
+    margin-bottom: 5rem;
+    left: 0;
+    right: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .sidebar {
+    top: 0;
+    width: 5rem;
+    height: 100%;
+  }
+  .sidebar:hover {
+    width: 12.5rem;
+  }
+  .sidebar:hover .brand-text,
+  .sidebar:hover .link-text {
+    display: inline;
+  }
+  main {
+    margin-left: 5rem;
+    padding: 1rem;
+  }
+}
