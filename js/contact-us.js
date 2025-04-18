@@ -24,5 +24,9 @@ function validateForm(userName, email, phone, message) {
   return true;
 }
 
+validateForm("", "", "", "");
+validateForm("Jake", "Jakegmail.com", "1234567890", "Hello World");
+validateForm("Jake", "Jake@gmail.com", "123", "Hello");
 validateForm(userName, email, phone, message);
+
 // End Contact us form validation

@@ -22,4 +22,5 @@ function getLanguageLearners(language) {
 
 // Example of calling the function
 console.log(getLanguageLearners("Spanish")); // Output: Spanish has 49.8M learners.
+console.log(getLanguageLearners("chinese"));
 //   End of example 1

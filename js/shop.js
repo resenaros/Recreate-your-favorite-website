@@ -8,13 +8,14 @@ function buyStreakFreeze() {
 
   if (gems >= cost) {
     gems -= cost; // Deduct gems
-    alert("You've successfully bought Streak Freeze!");
+    console.log("You've successfully bought Streak Freeze!");
   } else {
-    alert("You don't have enough gems to buy Streak Freeze!");
+    console.log("You don't have enough gems to buy Streak Freeze!");
   }
 }
 
 // Example of calling the function (on button click simulation)
-console.log(gems); // Check current gems balance
+console.log("Before Purchase:", gems); // Check current gems balance
 buyStreakFreeze(); // Attempts to buy Streak Freeze
+console.log("After Purchase:", gems); // Check current gems balance
 // End of shop functions
